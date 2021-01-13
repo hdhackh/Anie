@@ -1,9 +1,9 @@
-# ELIZA
-##rewrited by @peru_monster
+# ★彡[ᴀɴɪᴇ]彡★
+##rewrited by @RoseLoverX
 
 This is a userbot made for telegram. I made this userbot with help of all other userbots available in telegram. All credits goes to its Respective Owners...
 # For any query:-
-### [Join Here For Any Query](https://t.me/Eliza_userbot_support)
+### [Join Here For Any Query](https://t.me/legend_bot_support)
 
 ### The Easy Way to deploy the bot
 Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from [Bot Father](https://t.me/botfather) and then Generate stringsession by clicking on run.on.repl.it button below and then click on deploy to heroku . Before clicking on deploy to heroku just click on fork and star just below
@@ -12,15 +12,15 @@ Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from 
 [![Get string session](https://repl.it/badge/github/PerU-MoNsteR/Eliza)](https://repl.it/@SuhaashL/generatestring#main.py)
 
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PerU-MoNsteR/Eliza/tree/master)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Amarnathcdj/Anie/tree/master)
 
 
 <p align="center">
-  <a href="https://github.com/PerU-MoNsteR/Eliza/fork">
+  <a href="https://github.com/Amarnathcdj/Anie/fork">
     <img src="https://img.shields.io/github/forks/PerU-MoNsteR/Eliza?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/PerU-MoNsteR/Eliza">
+  <a href="https://github.com/Amarnathcdj/Anie">
     <img src="https://img.shields.io/github/stars/PerU-MoNsteR?style=social">
   </a>
 </p>
@@ -30,7 +30,7 @@ Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from 
 ## The Normal Way
 Simply clone the repository and run the main file:
 ```sh
-git clone https://github.com/PerU-MoNsteR/Eliza
+git clone https://github.com/Amarnathcdj/Anie
 cd eliza
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
