@@ -1,9 +1,9 @@
-# ELIZA UserBot
-   ### by @peru_monster
+# ★彡[ᴀɴɪᴇ]彡★
+   ### by @RoseloverX
 
 This is a userbot made for telegram. I made this userbot with help of all other userbots available in telegram. All credits goes to its Respective Owners...
 # For any query:-
-![Contributers](https://img.shields.io/github/contributors/PerU-MoNsteR/Eliza)
+![Contributers](https://img.shields.io/github/contributors/Amarnathcdj/Anie)
 
 <a href="https://t.me/elizasupport01"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="support" /></a>
 </p> <a href="https://t.me/eliza_userbot_support"> <img src="https://img.shields.io/badge/telegram-Support_Channel-blue?style=social&logo=telegram" alt="support" /></a>
@@ -20,7 +20,7 @@ Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from 
 
 
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PerU-MoNsteR/Eliza/tree/master)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Amarnathcdj/Anie/tree/master)
 
 
 <p align="center">
@@ -34,7 +34,7 @@ Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from 
 </p>
 
 
-[![Elizalogo](https://telegra.ph/file/ced30b3600c5a4e6b2d8a.jpg)](https://heroku.com/deploy?template=https://github.com/PerU-MoNsteR/Eliza)
+[![Elizalogo](https://telegra.ph/file/ced30b3600c5a4e6b2d8a.jpg)](https://heroku.com/deploy?template=https://github.com/Amarnathcdj/Anie)
 
 ## The Normal Way
 Simply clone the repository and run the main file:
