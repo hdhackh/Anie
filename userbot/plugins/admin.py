@@ -127,15 +127,15 @@ async def promote(promt):
         delete_messages=True,
         pin_messages=True,
     )
-    webevent = await edit_or_reply(promt, "`Promoting...`")
+    webevent = await edit_or_reply(promt, "`Promoting...🔥`")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "Admin"
+        rank = "ǟɖʍɨռ"
     if not user:
         return
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await webevent.edit("`Promoted Successfully! Now gib Party`")
+        await webevent.edit("`Promoted Successfully😜! Ab Nacho BenCho 🎉🎉`")
     except BadRequestError:
         await webevent.edit(NO_PERM)
         return
@@ -159,7 +159,7 @@ async def demote(dmod):
     if not admin and not creator:
         await edit_or_reply(dmod, NO_ADMIN)
         return
-    webevent = await edit_or_reply(dmod, "`Demoting...`")
+    webevent = await edit_or_reply(dmod, "`Demoting...😂`")
     rank = "admeme"
     user = await get_user_from_event(dmod)
     user = user[0]
@@ -178,7 +178,7 @@ async def demote(dmod):
     except BadRequestError:
         await webevent.edit(NO_PERM)
         return
-    await webevent.edit("`Demoted Successfully! Betterluck next time`")
+    await webevent.edit("`Demoted Successfully! Don't Behave Retarded😜`")
     if BOTLOG:
         await dmod.client.send_message(
             BOTLOG_CHATID,
@@ -202,7 +202,7 @@ async def ban(bon):
     user, reason = await get_user_from_event(bon)
     if not user:
         return
-    webevent = await edit_or_reply(bon, "`Whacking the pest!`")
+    webevent = await edit_or_reply(bon, "`Ab Tu Ja Iderse 😐`")
     try:
         await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
@@ -218,9 +218,9 @@ async def ban(bon):
         )
         return
     if reason:
-        await webevent.edit(f"`{str(user.id)}` is banned !!\nReason: {reason}")
+        await webevent.edit(f"`{str(user.id)}` is Banned 🚫!!\nReason: {reason}")
     else:
-        await webevent.edit(f"`{str(user.id)}` is banned !!")
+        await webevent.edit(f"`{str(user.id)}` is Banned 🚫!!")
     if BOTLOG:
         await bon.client.send_message(
             BOTLOG_CHATID,
@@ -248,7 +248,7 @@ async def nothanos(unbon):
         return
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await webevent.edit("Unbanned Successfully.")
+        await webevent.edit("Granting Another Chance😐.")
         if BOTLOG:
             await unbon.client.send_message(
                 BOTLOG_CHATID,
@@ -289,7 +289,7 @@ async def startmute(event):
         except Exception as e:
             await event.edit("Error occured!\nError is " + str(e))
         else:
-            await event.edit("Successfully muted that person.\n**｀-´)⊃━☆ﾟ.*･｡ﾟ **")
+            await event.edit("Chup Re Lwde 😂😂.\n**｀-´)⊃━☆ﾟ.*･｡ﾟ **")
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID,
@@ -385,7 +385,7 @@ async def endmute(event):
         except Exception as e:
             await event.edit("Error occured!\nError is " + str(e))
         else:
-            await event.edit("Successfully unmuted that person")
+            await event.edit("Ab Bole Gemdu😜")
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID,
