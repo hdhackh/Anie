@@ -2,11 +2,11 @@ import asyncio
 import os
 import time
 from datetime import datetime
-from telethon import events
-import asyncio
+
 from uniborg.util import admin_cmd
-from userbot.utils import admin_cmd, progress
+
 from userbot import CMD_HELP
+from userbot.utils import admin_cmd, progress
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "thumb_image.jpg"
 
@@ -19,7 +19,6 @@ async def _(event):
     if os.path.exists(thumb_image_path):
         thumb = thumb_image_path
     dcevent = await event.edit(
-        
         "Rename & Upload in process 🙄🙇‍♂️🙇‍♂️🙇‍♀️ It might take some time if file size is big",
     )
     input_str = event.pattern_match.group(1)
@@ -72,11 +71,9 @@ async def _(event):
         else:
             await dcevent.edit("File Not Found {}".format(input_str))
     else:
-        await dcevent.edit(
-           ".rename file.name as reply to a Telegram media/file"
-        )
-        
-        
+        await dcevent.edit(".rename file.name as reply to a Telegram media/file")
+
+
 @borg.on(admin_cmd(pattern="ttf ?(.*)"))
 async def get(event):
     name = event.text[5:]
@@ -84,14 +81,12 @@ async def get(event):
     with open(name, "w") as f:
         f.write(m.message)
     await event.delete()
-    await borg.send_file(event.chat_id,name,force_document=True)
+    await borg.send_file(event.chat_id, name, force_document=True)
 
 
 CMD_HELP.update(
     {
-        "rename": 
-    ".rename filename."
-    "\nReply to media with above command to rename and upload the file with given name__"
-    
+        "rename": ".rename filename."
+        "\nReply to media with above command to rename and upload the file with given name__"
     }
 )
