@@ -17,7 +17,7 @@ from . import runcmd
 HEROKU_APP_NAME = Config.HEROKU_APP_NAME or None
 HEROKU_API_KEY = Config.HEROKU_API_KEY or None
 UPSTREAM_REPO_BRANCH = "master"
-UPSTREAM_REPO_URL = "https://github.com/Amarnathcdj/Eliza.git"
+UPSTREAM_REPO_URL = "https://github.com/Amarnathcdj/Anie.git"
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
@@ -225,7 +225,7 @@ async def upstream(event):
 @borg.on(sudo_cmd(pattern="nopm$", allow_sudo=True))
 async def upstream(event):
     event = await edit_or_reply(event, "`Repo changes to Webo branch wait a sec ....`")
-    off_repo = "https://github.com/PerU-MoNsteR/Eliza"
+    off_repo = "https://github.com/Amarnathcdj/Anie"
     catcmd = f"rm -rf .git"
     try:
         await runcmd(catcmd)
