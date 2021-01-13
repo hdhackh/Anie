@@ -1,6 +1,6 @@
 {
-  "name": "Eliza",
-  "description": "The best and most awaited userbot made and modified by  owner Made with ❤ For Support Join @eliza_support ",
+  "name": "Anie",
+  "description": "Op est Not Ever made😏😏😏 ",
   "logo": "https://telegra.ph/file/ced30b3600c5a4e6b2d8a.jpg",
     "keywords": [
     "telegram",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/PerU-MoNsteR/Eliza/",
-  "website": "https://github.com/PerU-MoNsteR/",
-  "success_url": "https://t.me/Eliza_userbot_support",
+  "repository": "https://github.com/Amarnathcdj/Anie/",
+  "website": "https://github.com/Amarnathcdj/",
+  "success_url": "https://t.me/legend_bot_support",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable heroku.",
