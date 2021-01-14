@@ -7,13 +7,10 @@ import asyncio
 import io
 import time
 
-from . import ALIVE_NAME
-
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Aɳιҽ"
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="salive ?(.*)"))
+@borg.on(admin_cmd(pattern="on ?(.*)"))
 async def _(event):
     if event.fwd_from or event.via_bot_id:
         return
@@ -36,7 +33,7 @@ async def _(event):
     else:
         _o = o.split("\n")
         o = "`\n".join(_o)
-    OUTPUT = f"        ꧁༒☬𝓐𝓷𝓲𝓮☬༒꧂\nAႦσυƚ ɱყ ʂყʂƚҽɱ\n➾ Tҽʅҽƚԋσɳ Vҽɾʂισɳ= 1.17.5\n➾Cσρყɾιɠԋƚ Ⴆყ= Aɳιҽ\n➾Mყ Mαʂƚҽɾ = {DEFAULTUSER}\n"
+    OUTPUT = f"★彡[ᴀɴɪᴇ]彡★\nAႦσυƚ ɱყ ʂყʂƚҽɱ\n➾ Tҽʅҽƚԋσɳ Vҽɾʂισɳ= 1.17.5\n➾Cσρყɾιɠԋƚ Ⴆყ= Aɳιҽ\n➾Mყ Mαʂƚҽɾ = AɳαɾɳαƚԋCԃʝ\n"
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "exec.text"
