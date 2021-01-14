@@ -248,6 +248,8 @@ async def _(event):
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
+
+
 @borg.on(admin_cmd("ss ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -286,6 +288,8 @@ async def _(event):
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
+
+
 @borg.on(admin_cmd("pp ?(.*)"))
 async def _(event):
     if event.fwd_from:
