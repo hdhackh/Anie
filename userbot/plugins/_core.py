@@ -9,7 +9,7 @@ from userbot.utils import edit_or_reply as eor
 from userbot.utils import load_module, remove_plugin, sudo_cmd
 
 DELETE_TIMEOUT = 3
-thumb_image_path = "./Fonts/IMG_20201005_150245_168.jpg"
+thumb_image_path = "./Fonts/wp1909427-amoled-wallpapers.png"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie"
 
 
