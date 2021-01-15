@@ -68,7 +68,7 @@ async def get(event):
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "thumb_image.jpg"
 
 
-@borg.on(admin_cmd(pattern="stoi"))
+@borg.on(admin_cmd(pattern="si"))
 @borg.on(sudo_cmd(pattern="stoi", allow_sudo=True))
 async def danish(hehe):
     if hehe.fwd_from:
@@ -120,7 +120,7 @@ async def danish(hehe):
 # hehe
 
 
-@borg.on(admin_cmd(pattern="itos"))
+@borg.on(admin_cmd(pattern="is"))
 @borg.on(sudo_cmd(pattern="itos", allow_sudo=True))
 async def teamcobra(hehe):
     if hehe.fwd_from:
@@ -176,9 +176,9 @@ CMD_HELP.update(
     \nUSAGE   ★  open files as text (id the amount of words r resonable)\
     \n\n📌 CMD ★ .doc <file name.extension> <reply to any text/media>\
     \nUSAGE   ★  Create a document of anything (example:- .doc dc.mp4, .doc dc.txt, .doc dc.webp)\
-    \n\n📌 CMD ★ .stoi\
+    \n\n📌 CMD ★ .si\
     \nUSAGE   ★  Convert sticker to image\
-    \n\n📌 CMD ★ .itos\
+    \n\n📌 CMD ★ .is\
     \nUSAGE   ★  Convert Image to Sticker"
     }
 )
