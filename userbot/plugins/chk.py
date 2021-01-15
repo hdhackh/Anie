@@ -9,6 +9,7 @@ naam = str(ALIVE_NAME)
 
 bot = "@Gayroebot"
 
+
 @borg.on(admin_cmd("py ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -47,6 +48,7 @@ async def _(event):
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
+
 
 @borg.on(admin_cmd("ip ?(.*)"))
 async def _(event):
@@ -207,6 +209,7 @@ async def _(event):
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
 
+
 @borg.on(admin_cmd("chg ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -245,4 +248,3 @@ async def _(event):
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
-
