@@ -15,7 +15,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in heroku vars"
 PREV_REPLY_MESSAGE = {}
 # ---------------------------Constants-----------------------
 PM = (
-    "`Hello. You are accessing the availabe menu of my peru master,`"
+    "`Hello. You are accessing the availabe menu of my peru master,Join @INDIANGIVEAWAYSZ To Get Auto Approved `"
     f"{DEFAULTUSER}.\n"
     "__Let's make this smooth and let me know why you are here.__\n"
     "**Choose one of the following reasons why you are here:**\n\n"
