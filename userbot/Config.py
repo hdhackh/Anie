@@ -20,6 +20,7 @@ if ENV:
         API_HASH = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
         STRING_SESSION = os.environ.get("STRING_SESSION", None)
         # For Databases
+
         DB_URI = os.environ.get("DATABASE_URL", None)
         SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get(
             "SCREEN_SHOT_LAYER_ACCESS_KEY", None
@@ -41,6 +42,7 @@ if ENV:
             PRIVATE_GROUP_ID = int(PRIVATE_GROUP_ID)
         PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", None)
         if PLUGIN_CHANNEL:
+        PM_DATA = os.environ.get("PM_DATA", None)
             PLUGIN_CHANNEL = int(PLUGIN_CHANNEL)
         # Send .get_id in any channel to fill this value. ReQuired for @Manuel15
         # inspiration to work!
