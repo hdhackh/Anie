@@ -1,4 +1,6 @@
-# Inspired By @xdityas code and Modified By @krish1303y
+#make by @LEGENDX22
+#MAKE FOR ONLY FUN 
+# UNDER LICENCE VERSION 3.0
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
