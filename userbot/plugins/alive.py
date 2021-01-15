@@ -1,14 +1,56 @@
-# Thanks to Sipak bro and Aryan..
-# animation Idea by @(ItzSipak) && @Hell boy_pikachu
+# Thanks to Sipak bro and Aryan.. 
+# animation Idea by @ItzSipak && @Hell boy_pikachu
 # Made by @hellboi_atul ....and thanks to @Crackexy for the logos...
 # Kang with credits else gay...
 import asyncio
-
+import os
+import requests
+from PIL import Image
+from io import BytesIO
+import random
+from telethon import events, version
 from userbot.utils import admin_cmd, sudo_cmd
+import time
+from datetime import datetime
+from userbot.__init__ import StartTime
+from userbot import ALIVE_NAME
+from telethon.tl.types import ChannelParticipantsAdmins
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ǟռɨɛ"
 
-from . import ALIVE_NAME
+def get_readable_time(seconds: int) -> str:
+    count = 0
+    ping_time = ""
+    time_list = []
+    time_suffix_list = ["s", "m", "h", "days"]
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Aɳιҽ"
+    while count < 4:
+        count += 1
+        if count < 3:
+            remainder, result = divmod(seconds, 60)
+        else:
+            remainder, result = divmod(seconds, 24)
+        if seconds == 0 and remainder == 0:
+            break
+        time_list.append(int(result))
+        seconds = int(remainder)
+
+    for x in range(len(time_list)):
+        time_list[x] = str(time_list[x]) + time_suffix_list[x]
+    if len(time_list) == 4:
+        ping_time += time_list.pop() + ", "
+
+    time_list.reverse()
+    ping_time += ":".join(time_list)
+
+    return ping_time
+
+uptime = get_readable_time((time.time() - StartTime))
+
+# Thanks to Sipak bro and Aryan.. 
+# animation Idea by @ItzSipak && @Hell boy_pikachu
+# Made by @hellboi_atul ....and thanks to @Crackexy for the logos...
+# Kang with credits else gay...
+# alive.py for DC(DARK COBRA)
 global ghanti
 ghanti = borg.uid
 edit_time = 5
@@ -17,51 +59,47 @@ file1 = "https://telegra.ph/file/74baa0fee2d1f3cc8112d.jpg"
 file2 = "https://telegra.ph/file/897db0c5f8f06134556f2.jpg"
 file3 = "https://telegra.ph/file/09c1cb99d4bd6f0b9cbad.jpg"
 file4 = "https://telegra.ph/file/9271370fd1f5dd877388b.jpg"
-file5 = "https://telegra.ph/file/6b5e21235cb7244560e1b.jpg"
-file6 = "https://telegra.ph/file/57d1a5bbb7cf3d0b00b54.jpg"
-file7 = "https://telegra.ph/file/4411af83aa47cad7bf4f9.jpg"
 """ =======================CONSTANTS====================== """
-pm_caption = "★彡[ᴀɴɪᴇ]彡★\n\n"
-pm_caption += "𝓜𝔂 𝓢𝔂𝓼𝓽𝓮𝓶𝓼 𝓪𝓻𝓮 𝓯𝓲𝓷𝓮 𝓪𝓯\n\n"
-pm_caption += "✘ 𝓐𝓫𝓸𝓾𝓽 𝓜𝔂 𝓢𝔂𝓼𝓽𝓮𝓶 ✘\n\n"
-pm_caption += "➾ 𝓣𝓮𝓵𝓮𝓽𝓱𝓸𝓷 𝓥𝓮𝓻𝓼𝓲𝓸𝓷 ☞ 1.17.5\n"
-pm_caption += "➾ 𝓛𝓲𝓬𝓮𝓷𝓼𝓮  ☞ [Aɳιҽ2021](https://github.com/Amarnathcdj)\n"
-pm_caption += "➾ 𝓒𝓸𝓹𝔂𝓻𝓲𝓰𝓱𝓽 𝓑𝔂 ☞ [Aɳιҽ](https://github.com/Amarnathcdj/Anie)\n\n"
-pm_caption += f"➾ 𝓜𝔂 𝓜𝓪𝓼𝓽𝓮𝓻 ☞ {DEFAULTUSER}\n"
 
 
-@borg.on(admin_cmd(pattern=r"alive"))
-@borg.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
+@borg.on(admin_cmd(pattern=r"ae"))
+@borg.on(sudo_cmd(pattern=r"ae", allow_sudo=True))
+
 async def hmm(yes):
-    await yes.get_chat()
+    chat = await yes.get_chat()
     global ghanti
     ghanti = borg.uid
-    await yes.delete()
-    on = await borg.send_file(yes.chat_id, file=file7, caption=pm_caption)
+    await yes.delete() 
+    pm_caption = "**↤↤↤↤↤ ★彡ᴀɴɪᴇ]彡★ ↦↦↦↦↦**\n\n"
+    pm_caption += "**★ǟʟʟ ֆʏֆȶɛʍֆ ǟʀɛ օռ**\n\n"
+    pm_caption += "★ǟɮօʊȶ ʍʏ ֆʏֆȶɛʍ\n\n"
+    pm_caption += f"★ȶɛʟɛȶɦօռ ʋɛʀֆɨօռ★ 1.17.8\n"
+    pm_caption += "★ʟɨƈɛռֆɛ★  [ǟռɨɛ](https://github.com/Amarnathcdj)\n"
+    pm_caption += "★ƈօքʏʀɨɢɦȶ ɮʏ★ [ǟռɨɛ u̴b̴](https://github.com/Amarnathcdj/Anie)\n"
+    pm_caption +=f"★ʊքȶɨʍɛ★ {uptime}\n\n"
+    pm_caption += f"★ʍʏ ʍǟֆȶɛʀ★ [{DEFAULTUSER}](tg://user?id={ghanti})\n"
+    on = await borg.send_file(yes.chat_id, file=file1,caption=pm_caption)
 
     await asyncio.sleep(edit_time)
-    ok = await borg.edit_message(yes.chat_id, on, file=file1)
+    ok = await borg.edit_message(yes.chat_id, on, file=file2) 
 
     await asyncio.sleep(edit_time)
     ok2 = await borg.edit_message(yes.chat_id, ok, file=file3)
 
     await asyncio.sleep(edit_time)
-    ok3 = await borg.edit_message(yes.chat_id, ok2, file=file5)
-
+    ok3 = await borg.edit_message(yes.chat_id, ok2, file=file1)
+    
     await asyncio.sleep(edit_time)
     ok4 = await borg.edit_message(yes.chat_id, ok3, file=file3)
-
+    
     await asyncio.sleep(edit_time)
-    ok5 = await borg.edit_message(yes.chat_id, ok4, file=file5)
-
+    ok5 = await borg.edit_message(yes.chat_id, ok4, file=file2)
+    
     await asyncio.sleep(edit_time)
     ok6 = await borg.edit_message(yes.chat_id, ok5, file=file1)
-
+    
     await asyncio.sleep(edit_time)
     ok7 = await borg.edit_message(yes.chat_id, ok6, file=file4)
 
-    await asyncio.sleep(edit_time)
-    ok8 = await borg.edit_message(yes.chat_id, ok7, file=file2)
+    
 
-    await asyncio.sleep(edit_time)
-    ok9 = await borg.edit_message(yes.chat_id, ok8, file=file6)
