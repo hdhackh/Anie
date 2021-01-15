@@ -2,6 +2,7 @@ Pillow>=5.3.0
 PyGithub
 pymediainfo
 aiofiles
+cv2
 aiohttp
 aria2p
 async_generator
