@@ -58,8 +58,8 @@ file4 = "https://telegra.ph/file/9271370fd1f5dd877388b.jpg"
 """ =======================CONSTANTS====================== """
 
 
-@borg.on(admin_cmd(pattern=r"ae"))
-@borg.on(sudo_cmd(pattern=r"ae", allow_sudo=True))
+@borg.on(admin_cmd(pattern=r"alive"))
+@borg.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
 async def hmm(yes):
     await yes.get_chat()
     global ghanti
