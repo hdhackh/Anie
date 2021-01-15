@@ -42,7 +42,6 @@ if ENV:
             PRIVATE_GROUP_ID = int(PRIVATE_GROUP_ID)
         PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", None)
         if PLUGIN_CHANNEL:
-        PM_DATA = os.environ.get("PM_DATA", None)
             PLUGIN_CHANNEL = int(PLUGIN_CHANNEL)
         # Send .get_id in any channel to fill this value. ReQuired for @Manuel15
         # inspiration to work!
