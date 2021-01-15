@@ -49,7 +49,7 @@ async def _(event):
             except YouBlockedUserError:
                 await event.edit("Error: unblock @HeathonCryptoBot `and try again!")
 
-
+bot = "@HeathonCryptoBot"
 @borg.on(admin_cmd("crypto ?(.*)"))
 async def _(event):
     if event.fwd_from:
