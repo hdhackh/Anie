@@ -1,4 +1,4 @@
-# Made By @RoseloverX Kang With Credits Else Gey [Modified from @xditya's Plugin]
+# Made By @RoseloverX Kang With Credits Else Gey [Modified from @LEGENDX22's Plugin]
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
@@ -35,7 +35,7 @@ async def _(event):
                 audio = await conv.get_response()
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
-            except YouBlockedUserError:
+            except YouBlockedUserError: #1st time make by LEGEND X
                 await event.edit("Error: unblock @Carol5_bot and try again!")
     elif "" in sysarg:
         async with borg.conversation(bot) as conv:
@@ -58,7 +58,7 @@ async def _(event):
     if sysarg == "":
         async with borg.conversation(bot) as conv:
             try:
-                await conv.send_message("/start")
+                await conv.send_message("/start") #legend x 
                 await conv.get_response()
                 await conv.send_message("/ip ")
                 audio = await conv.get_response()
@@ -69,7 +69,7 @@ async def _(event):
     elif "@" in sysarg:
         async with borg.conversation(bot) as conv:
             try:
-                await conv.send_message("/start")
+                await conv.send_message("/start") #op Bolte LEGEND X
                 await conv.get_response()
                 await conv.send_message("/ip " + sysarg)
                 audio = await conv.get_response()
@@ -226,7 +226,7 @@ async def _(event):
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot and retry!")
-    elif "@" in sysarg:
+    elif "@" in sysarg: # make by LEGENDX22
         async with borg.conversation(bot) as conv:
             try:
                 await conv.send_message("/start")
