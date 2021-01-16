@@ -15,7 +15,7 @@ from telethon.sessions import StringSession
 from userbot.Config import Config
 from var import Var
 
-from .functions import elizafunction as topfunc
+from .functions import aniefunction as topfunc
 
 StartTime = time.time()
 anieversion = "2.0.4"
