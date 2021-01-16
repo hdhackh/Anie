@@ -250,5 +250,3 @@ async def hehehe(event):
                 chat.id, "**My Boss iz here.... It's your lucky day nibba😏**"
             )
             await borg.send_message(chat, "**Here comes my Master! Lucky you!!😏**")
-
-
