@@ -1,5 +1,5 @@
   
-FROM suhaash02/eliza:latest
+FROM suhaash02/anie:latest
 
 #clonning repo 
 

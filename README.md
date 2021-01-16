@@ -5,8 +5,8 @@ This is a userbot made for telegram. I made this userbot with help of all other 
 # For any query:-
 ![Contributers](https://img.shields.io/github/contributors/Amarnathcdj/Anie)
 
-<a href="https://t.me/elizasupport01"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="support" /></a>
-</p> <a href="https://t.me/eliza_userbot_support"> <img src="https://img.shields.io/badge/telegram-Support_Channel-blue?style=social&logo=telegram" alt="support" /></a>
+<a href="https://t.me/aniesupport01"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="support" /></a>
+</p> <a href="https://t.me/anie_userbot_support"> <img src="https://img.shields.io/badge/telegram-Support_Channel-blue?style=social&logo=telegram" alt="support" /></a>
 </p>
 
 ## The Easy Way to deploy the bot
@@ -40,7 +40,7 @@ Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from 
 Simply clone the repository and run the main file:
 ```sh
 git clone https://github.com/PerU-MoNsteR/Eliza
-cd eliza
+cd anie
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt

@@ -20,7 +20,7 @@ async def _(event):
     await event.edit("Restarting  ▰▰▰▰▰▰▰▰▱▱..")
     await asyncio.sleep(2)
     await event.edit(
-        "Restarted,wait... `.ping` me or type `.help`  to check if your eliza userbot is online/alive "
+        "Restarted,wait... `.ping` me or type `.help`  to check if your anie userbot is online/alive "
     )
     await borg.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)

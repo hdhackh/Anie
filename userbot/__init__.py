@@ -15,10 +15,10 @@ from telethon.sessions import StringSession
 from userbot.Config import Config
 from var import Var
 
-from .functions import elizafunction as topfunc
+from .functions import aniefunction as topfunc
 
 StartTime = time.time()
-elizaversion = "2.0.4"
+anieversion = "2.0.4"
 
 if Var.STRING_SESSION:
     session_name = str(Var.STRING_SESSION)

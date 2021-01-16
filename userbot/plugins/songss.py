@@ -53,7 +53,7 @@ async def FindMusicPleaseBot(gaana):
 
         await gaana.edit("`Sending Your Music...weit!Ã°ÂÂÂ`")
 
-        await bot.send_file(gaana.chat_id, eliza)
+        await bot.send_file(gaana.chat_id, anie)
 
         await bot.send_read_acknowledge(conv.chat_id)
 
