@@ -2,12 +2,12 @@ import asyncio
 import io
 import os
 
+from Legend.uniborgConfig import Config
+from Legend.utils import admin_cmd
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
-from Legend.uniborgConfig import Config
-from Legend.utils import admin_cmd
 from userbot import ALIVE_NAME, CMD_HELP, CUSTOM_PMPERMIT
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
