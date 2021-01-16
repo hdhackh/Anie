@@ -27,10 +27,10 @@ jobs:
       # commit changes
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: 'perumonster: auto fixes'
+          commit_message: 'LEGENDX: FIXED BY LEGEND X'
           commit_options: '--no-verify'
           repository: .
-          commit_user_name: PerU-MoNsteR
-          commit_user_email: 71298965+PerU-MoNsteR@users.noreply.github.com
-          commit_author: PerU-MoNsteR <71298965+PerU-MoNsteR+@users.noreply.github.com>
+          commit_user_name: legendx22
+          commit_user_email: 71298965+legendx22@users.noreply.github.com
+          commit_author: legendx22 <71298965+legendx22+@users.noreply.github.com>
 
