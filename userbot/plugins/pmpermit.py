@@ -9,11 +9,9 @@ from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
-from userbot import ALIVE_NAME, CUSTOM_PMPERMIT
+from userbot import ALIVE_NAME, CMD_HELP, CUSTOM_PMPERMIT
 from userbot.uniborgConfig import Config
 from userbot.utils import admin_cmd
-from userbot import CMD_HELP
-
 
 PM_TRUE_FALSE = Config.PM_DATA
 
@@ -253,14 +251,19 @@ async def hehehe(event):
             )
             await borg.send_message(chat, "**Here comes my Master! Lucky you!!😏**")
 
+
 CMD_HELP.update("pmpermit").add_command(
-  "allow", "<pm use only>", "It allow the user to PM you."
+    "allow", "<pm use only>", "It allow the user to PM you."
 ).add_command(
-  "disallow", "<pm use only>", "It disallows the user to PM. If user crosses the PM limit after disallow he/she will get blocked automatically"
+    "disallow",
+    "<pm use only>",
+    "It disallows the user to PM. If user crosses the PM limit after disallow he/she will get blocked automatically",
 ).add_command(
-  "block", "<pm use only>", "You know what it does.... Blocks the user"
+    "block", "<pm use only>", "You know what it does.... Blocks the user"
 ).add_command(
-  "listallowed", None, "Gives you the list of allowed PM's list"
+    "listallowed", None, "Gives you the list of allowed PM's list"
 ).add_command(
-  "set var PM_DATA", "DISABLE", "Turn off pm protection by your userbot. Your PM will not be protected."
+    "set var PM_DATA",
+    "DISABLE",
+    "Turn off pm protection by your userbot. Your PM will not be protected.",
 ).add()
