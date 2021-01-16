@@ -32,7 +32,7 @@ if ENV:
         HASH_TO_TORRENT_API = os.environ.get(
             "HASH_TO_TORRENT_API", "https://example.com/torrent/{}"
         )
-        #For PM Oermit
+        # For PM Oermit
         PM_DATA = os.environ.get("PM_DATA", "ENABLE")
         # This is required for the @telegraph functionality.
         TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Eliza Telegram")
