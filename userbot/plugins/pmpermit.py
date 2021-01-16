@@ -9,9 +9,11 @@ from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
-from userbot import ALIVE_NAME, CMD_HELP, CUSTOM_PMPERMIT
+from userbot import ALIVE_NAME, CUSTOM_PMPERMIT
 from userbot.uniborgConfig import Config
 from userbot.utils import admin_cmd
+from userbot import CMD_HELP
+
 
 PM_TRUE_FALSE = Config.PM_DATA
 
@@ -27,15 +29,15 @@ myid = bot.uid
 KRAKEN = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
-    else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
+    else "**YOU HAVE TRESPASSED TO MY MASTERS IB😡😡** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
 )
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Hêll Usêr"
-USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's Hêllẞø†.**\n__Now GTFO, i'm busy__"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
+USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by PM Security By Anie.**\n__Now GTFO, Lel__"
 USER_BOT_NO_WARN = (
-    "Hello, This is **Hêllẞø† Úl†rã Pr¡va†e Security Protocol⚠️**.\n"
+    "Hello, This is **Anie Ub PM Protection**.\n"
     f"This is my master {DEFAULTUSER}'s Inbox\n"
-    f"\n**{KRAKEN}**\n\n"
-    "To start a valid conversation\n🔱Register Your Request!🔱\nSend `/start` To Register Your Request\nHopefully u will get a reply🔥"
+    f"\n**Don't Spem Here😐😐**\n\n"
+    "To start a valid conversation\n❄️Register Your Request!❄️\nSend `/start` To Register Your Request\nHopefully u will get a reply In 69 Light Years."
 )
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -251,19 +253,14 @@ async def hehehe(event):
             )
             await borg.send_message(chat, "**Here comes my Master! Lucky you!!😏**")
 
-
 CMD_HELP.update("pmpermit").add_command(
-    "allow", "<pm use only>", "It allow the user to PM you."
+  "allow", "<pm use only>", "It allow the user to PM you."
 ).add_command(
-    "disallow",
-    "<pm use only>",
-    "It disallows the user to PM. If user crosses the PM limit after disallow he/she will get blocked automatically",
+  "disallow", "<pm use only>", "It disallows the user to PM. If user crosses the PM limit after disallow he/she will get blocked automatically"
 ).add_command(
-    "block", "<pm use only>", "You know what it does.... Blocks the user"
+  "block", "<pm use only>", "You know what it does.... Blocks the user"
 ).add_command(
-    "listallowed", None, "Gives you the list of allowed PM's list"
+  "listallowed", None, "Gives you the list of allowed PM's list"
 ).add_command(
-    "set var PM_DATA",
-    "DISABLE",
-    "Turn off pm protection by your userbot. Your PM will not be protected.",
+  "set var PM_DATA", "DISABLE", "Turn off pm protection by your userbot. Your PM will not be protected."
 ).add()
