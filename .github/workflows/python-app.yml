@@ -1,4 +1,4 @@
-name: ElizaChecker
+name: aniebot
 
 on: [push, pull_request]
 
