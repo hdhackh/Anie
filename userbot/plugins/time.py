@@ -49,6 +49,7 @@ async def _(event):
     await asyncio.sleep(5)
     await event.delete()
 
+
 @borg.on(admin_cmd(pattern="time", outgoing=True))
 async def _(event):
     if event.fwd_from:
@@ -57,10 +58,9 @@ async def _(event):
     await edit_or_reply(event, "Getting Time.....")
     end = datetime.now()
     (end - start).microseconds / 1000
-    lemd = datetime.now().strftime(
-        "Time: %H:%M:%S"
-    )
+    lemd = datetime.now().strftime("Time: %H:%M:%S")
     await edit_or_reply(event, f"{lemd}")
+
 
 @borg.on(admin_cmd("gtime (.*)"))  # pylint:disable=E0602
 async def _(event):
