@@ -9,12 +9,12 @@ from userbot.utils import admin_cmd
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-@borg.on(admin_cmd("time ?(.*)"))  # pylint:disable=E0602
+@borg.on(admin_cmd("stime ?(.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
     current_time = datetime.now().strftime(
-        "⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ \nELIZA TIMEZONE \n LOCATION: India🇮🇳 \n  Time: %H:%M:%S \n  Date: %d.%m.%y \n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡"
+        "âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡ \nELIZA TIMEZONE \n LOCATION: IndiaðŸ‡®ðŸ‡³ \n  Time: %H:%M:%S \n  Date: %d.%m.%y \nâš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡âš¡"
     )
     start = datetime.now()
     input_str = event.pattern_match.group(1)
@@ -49,6 +49,18 @@ async def _(event):
     await asyncio.sleep(5)
     await event.delete()
 
+@borg.on(admin_cmd(pattern="time", outgoing=True))
+async def _(event):
+    if event.fwd_from:
+        return
+    start = datetime.now()
+    await edit_or_reply(event, "Getting Time.....")
+    end = datetime.now()
+    (end - start).microseconds / 1000
+    lemd = datetime.now().strftime(
+        "Time: %H:%M:%S"
+    )
+    await edit_or_reply(event, f"{lemd}")
 
 @borg.on(admin_cmd("gtime (.*)"))  # pylint:disable=E0602
 async def _(event):
