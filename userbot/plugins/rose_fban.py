@@ -41,6 +41,7 @@ async def _(event):
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
 
+
 @borg.on(admin_cmd("unfban ?(.*)"))
 async def _(event):
     if event.fwd_from:
