@@ -21,7 +21,7 @@ HELLPIC = (
     if PMPERMIT_PIC
     else "https://telegra.ph/file/8b086b95491df9f0d4f58.jpg"
 )
-PM_WARNS = -1001433850650
+PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 myid = bot.uid
 KRAKEN = (
