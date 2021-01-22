@@ -128,6 +128,7 @@ async def memes(per):
         if files and os.path.exists(files):
             os.remove(files)
 
+
 @bot.on(admin_cmd(pattern="cfont(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="cfont(?: |$)(.*)", allow_sudo=True))
 async def lang(event):
