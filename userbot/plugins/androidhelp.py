@@ -1216,7 +1216,7 @@ async def _(event):
             await bot.forward_messages(event.chat_id, response.message)
 
 
-@register(outgoing=True, pattern="^.of(?: |$)(.*)")
+@register(outgoing=True, pattern="^.udf(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
