@@ -421,6 +421,7 @@ me = [
     "᙭" "Y" "ᘔ",
 ]
 
+geyish = ["Ꭿ", "Ᏸ", "ℭ", "ⅅ", "℮", "ℱ", "Ꮹ", "ℋ", "Ꮠ", "ℐ", "Ӄ", "ℒ", "ℳ", "ℕ", "Ꮎ", "⅌", "ℚ", "ℜ", "Ꮥ", "Ƭ", "Ʋ", "Ꮙ", "Ꮤ", "ℵ", "Ꮍ", "ℤ",]
 
 @borg.on(admin_cmd(pattern="f1 ?(.*)"))
 async def weebify(event):
@@ -670,5 +671,22 @@ async def weebify(event):
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = webbind[normiefont.index(normiecharacter)]
+            string = string.replace(normiecharacter, weebycharacter)
+    await event.edit(string)
+
+@borg.on(admin_cmd(pattern="fd ?(.*)"))
+async def weebify(event):
+
+    args = event.pattern_match.group(1)
+    if not args:
+        get = await event.get_reply_message()
+        args = get.text
+    if not args:
+        await event.edit("`What I am Supposed to Weebify U Dumb`")
+        return
+    string = "".join(args).lower()
+    for normiecharacter in string:
+        if normiecharacter in normiefont:
+            weebycharacter = geyish[normiefont.index(normiecharacter)]
             string = string.replace(normiecharacter, weebycharacter)
     await event.edit(string)
