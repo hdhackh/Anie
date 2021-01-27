@@ -17,6 +17,6 @@ jobs:
           commit_message: 'Auto Fixes'
           commit_options: '--no-verify'
           repository: .
-          commit_user_name: legendx22
+          commit_user_name: LEGENDXOP
           commit_user_email: 71298965+legendx22@users.noreply.github.com
           commit_author: legendx22 <71298965+legendx22@users.noreply.github.com>
