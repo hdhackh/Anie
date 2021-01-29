@@ -5,6 +5,7 @@ aiofiles
 aiohttp
 aria2p
 async_generator
+pygments
 beautifulsoup4
 fontTools
 bs4
