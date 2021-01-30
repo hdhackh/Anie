@@ -252,7 +252,7 @@ async def _(event):
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
 
 
-@borg.on(admin_cmd("ss ?(.*)"))
+@borg.on(admin_cmd("stripes ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -292,7 +292,7 @@ async def _(event):
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
 
 
-@borg.on(admin_cmd("pp ?(.*)"))
+@borg.on(admin_cmd("paypal ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
