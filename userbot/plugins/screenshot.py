@@ -32,6 +32,7 @@ async def _(event):
         await event.edit("Starting Google Chrome BIN")
         driver = webdriver.Chrome(chrome_options=chrome_options)
         input_str = event.pattern_match.group(1)
+        imp = "anie"
         driver.get(input_str)
         await event.edit("Calculating Page Dimensions")
         height = driver.execute_script(
@@ -40,7 +41,7 @@ async def _(event):
         width = driver.execute_script(
             "return Math.max(document.body.scrollWidth, document.body.offsetWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.offsetWidth);"
         )
-        await event.edit("Painting cat-page")
+        await event.edit("Painting web-page")
         driver.set_window_size(width + 100, height + 100)
         # Add some pixels on top of the calculated dimensions
         # for good measure to make the scroll bars disappear
@@ -52,11 +53,11 @@ async def _(event):
         if event.reply_to_msg_id:
             message_id = event.reply_to_msg_id
         with io.BytesIO(im_png) as out_file:
-            out_file.name = "Eliza.ScreenCapture.PNG"
+            out_file.name = "Anie.sshot.PNG"
             await borg.send_file(
                 event.chat_id,
                 out_file,
-                caption=input_str,
+                caption=imp,
                 force_document=True,
                 reply_to=message_id,
                 allow_cache=False,
@@ -64,6 +65,6 @@ async def _(event):
             )
         end = datetime.now()
         ms = (end - start).seconds
-        await event.edit(f"Completed screencapture Process in {ms} seconds")
+        await event.edit(f"Done in {ms} seconds")
     except Exception:
         await event.edit(traceback.format_exc())
