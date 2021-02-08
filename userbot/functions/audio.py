@@ -1,4 +1,3 @@
-
 #    Copyright (C) Midhun KM 2020-2021
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -12,33 +11,13 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import requests
-from bs4 import BeautifulSoup
-from hachoir.metadata import extractMetadata
-from hachoir.parser import createParser
-import hachoir
-import asyncio
-import os
-from pathlib import Path
-from selenium import webdriver
-import time
-import requests
-import shutil
-import os
-import argparse
-import wget
-from fridaybot import bot as borg
-import lottie
-from fridaybot.utils import load_module
-from telethon.tl.types import DocumentAttributeAudio
-
 
 async def fetch_audio(event, ws):
     if not event.reply_to_msg_id:
         await event.edit("`Reply To A Video / Audio.`")
         return
-    warner_stark = await event.get_reply_message()    
-    if warner_stark.audio is None  and warner_stark.video is None:
+    warner_stark = await event.get_reply_message()
+    if warner_stark.audio is None and warner_stark.video is None:
         await event.edit("`Format Not Supported`")
         return
     if warner_stark.video:
@@ -50,5 +29,5 @@ async def fetch_audio(event, ws):
     elif warner_stark.audio:
         await event.edit("`Download Started !`")
         final_warner = await event.client.download_media(warner_stark.media)
-    await event.edit("`Almost Done!`")    
+    await event.edit("`Almost Done!`")
     return final_warner
