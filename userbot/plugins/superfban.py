@@ -1,10 +1,9 @@
-
 import asyncio
 
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd
 # By (@proboy22), and (@LEGENDX22)
-from userbot import bot
+from userbot import CMD_HELP, bot
+from userbot.utils import admin_cmd
+
 
 @bot.on(admin_cmd("superfban ?(.*)"))
 async def _(event):
@@ -15,9 +14,7 @@ async def _(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await bot.download_media(
-                previous_message, "fedlist"
-            )
+            downloaded_file_name = await bot.download_media(previous_message, "fedlist")
             await asyncio.sleep(6)
             file = open(downloaded_file_name, "r")
             lines = file.readlines()
@@ -167,9 +164,7 @@ async def _(event):
                 await response.click(0)
                 fedfile = await bot_conv.get_response()
                 if fedfile.media:
-                    downloaded_file_name = await bot.download_media(
-                        fedfile, "fedlist"
-                    )
+                    downloaded_file_name = await bot.download_media(fedfile, "fedlist")
                     file = open(downloaded_file_name, "r")
                     lines = file.readlines()
                     for line in lines:
