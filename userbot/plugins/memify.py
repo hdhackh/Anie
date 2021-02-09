@@ -923,5 +923,3 @@ async def memes(cat):
     for files in (catsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
-
-
