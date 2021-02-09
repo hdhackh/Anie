@@ -6,7 +6,7 @@ import asyncio
 import os
 import random
 
-from userbot.utils import admin_cmd
+from userbot.utils import admin_cmd, sudo_cmd
 
 from . import (
     LOGS,
