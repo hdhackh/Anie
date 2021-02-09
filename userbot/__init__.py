@@ -62,6 +62,7 @@ if bool(ENV):
         )
         quit(1)
     BOTLOG_CHATID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID", "-100"))
+    FBAN_GROUP_ID = int(os.environ.get("FBAN_GROUP_ID", "-100"))
     BOTLOG = sb(os.environ.get("BOTLOG", "True"))
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
     # Chrome Driver and Headless Google Chrome Binaries
