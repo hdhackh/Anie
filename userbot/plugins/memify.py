@@ -30,15 +30,14 @@ def random_color():
         "#" + "".join(random.choice("0123456789ABCDEF") for j in range(6))
         for i in range(number_of_colors)
     ]
+
+
 import asyncio
 import os
-import shlex
 from os import getcwd
-from os.path import basename, join
+from os.path import join
 from textwrap import wrap
-from typing import Optional, Tuple
 
-import numpy as np
 
 async def cat_meeme(upper_text, lower_text, CNG_FONTS, picture_name, endname):
     main_image = catimage(filename=picture_name)
@@ -63,6 +62,7 @@ async def cat_meeme(upper_text, lower_text, CNG_FONTS, picture_name, endname):
         )
     text_draw(main_image)
     main_image.save(filename=endname)
+
 
 async def cat_meme(CNG_FONTS, topString, bottomString, filename, endname):
     img = Image.open(filename)
@@ -108,6 +108,7 @@ async def cat_meme(CNG_FONTS, topString, bottomString, filename, endname):
     draw.text(topTextPosition, topString, (255, 255, 255), font=font)
     draw.text(bottomTextPosition, bottomString, (255, 255, 255), font=font)
     img.save(endname)
+
 
 CNG_FONTS = "userbot/helpers/styles/impact.ttf"
 FONTS = "1. `ProductSans-BoldItalic.ttf`\n2. `ProductSans-Light.ttf`\n3. `RoadRage-Regular.ttf`\n4. `digital.ttf`\n5. `impact.ttf`"
