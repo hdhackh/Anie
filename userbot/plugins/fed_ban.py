@@ -1,13 +1,16 @@
 # MADE BY LEGENDX22 AND PROBOY22
-#CREDITS TELEBOT
+# CREDITS TELEBOT
 # KEEP CREDITS PLEASE 🥺
 import asyncio
-from userbot.legend import NAME
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+
 # By (@proboy22), and (@LEGENDX22)
-from userbot import bot
+from userbot import CMD_HELP, bot
+from userbot.legend import NAME
+from userbot.utils import admin_cmd
+
 PRO = NAME
+
+
 @bot.on(admin_cmd("superfban ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -17,9 +20,7 @@ async def _(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await bot.download_media(
-                previous_message, "fedlist"
-            )
+            downloaded_file_name = await bot.download_media(previous_message, "fedlist")
             await asyncio.sleep(6)
             file = open(downloaded_file_name, "r")
             lines = file.readlines()
@@ -90,7 +91,9 @@ async def _(event):
                     else:
                         return
                 if len(fedList) == 0:
-                    await event.edit(f"WAIT MASTER I AM CHECKING {PRO} ALL FEDS GIVE ME TIME ({a+1}/3)...")
+                    await event.edit(
+                        f"WAIT MASTER I AM CHECKING {PRO} ALL FEDS GIVE ME TIME ({a+1}/3)..."
+                    )
                 else:
                     break
         else:
@@ -141,7 +144,7 @@ async def _(event):
 
 
 # By @HeisenbergTheDanger, @its_xditya
-# MODIFIED BY PROBOY22 
+# MODIFIED BY PROBOY22
 
 
 @bot.on(admin_cmd("superunfban ?(.*)"))
@@ -170,9 +173,7 @@ async def _(event):
                 await response.click(0)
                 fedfile = await bot_conv.get_response()
                 if fedfile.media:
-                    downloaded_file_name = await bot.download_media(
-                        fedfile, "fedlist"
-                    )
+                    downloaded_file_name = await bot.download_media(fedfile, "fedlist")
                     file = open(downloaded_file_name, "r")
                     lines = file.readlines()
                     for line in lines:
@@ -180,7 +181,9 @@ async def _(event):
                 else:
                     return
                 if len(fedList) == 0:
-                    await event.edit(f"FINDING {PRO} ALL FEDS GIVE ME SOME TIME({a+1}/3)...")
+                    await event.edit(
+                        f"FINDING {PRO} ALL FEDS GIVE ME SOME TIME({a+1}/3)..."
+                    )
                 else:
                     break
     else:
@@ -214,7 +217,9 @@ async def _(event):
         await asyncio.sleep(5)
         await bot.send_message(chat, f"/unfban {FBAN}")
         await asyncio.sleep(5)
-    await event.edit(f"SuperUnFBan Completed. Affected {len(fedList)} Feds by {PRO}.\n#LEGENDBOT")
+    await event.edit(
+        f"SuperUnFBan Completed. Affected {len(fedList)} Feds by {PRO}.\n#LEGENDBOT"
+    )
 
 
 # By TEAMLEGEND
