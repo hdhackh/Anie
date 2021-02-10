@@ -203,11 +203,13 @@ if ENV:
         TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
         #  for updater plugin
         UPSTREAM_REPO_URL = os.environ.get(
-            "UPSTREAM_REPO_URL", "https://github.com/PerU-MoNsteR/Eliza.git"
+            "UPSTREAM_REPO_URL", "https://github.com/Amarnathcdj/Anie.git"
         )
         FBAN_GROUP_ID = os.environ.get("FBAN_GROUP_ID", None)
         if FBAN_GROUP_ID:
             FBAN_GROUP_ID = int(FBAN_GROUP_ID)
+        EXCLUDE_FED = os.environ.get("EXCLUDE_FED", None)
+        FBAN_GROUP = int(os.environ.get("FBAN_GROUP", False))
         UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "master")
         # can get from https://coffeehouse.intellivoid.net/
         LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
