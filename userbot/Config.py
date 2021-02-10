@@ -205,6 +205,9 @@ if ENV:
         UPSTREAM_REPO_URL = os.environ.get(
             "UPSTREAM_REPO_URL", "https://github.com/PerU-MoNsteR/Eliza.git"
         )
+        FBAN_GROUP_ID = os.environ.get("FBAN_GROUP_ID", None)
+        if FBAN_GROUP_ID:
+            FBAN_GROUP_ID = int(FBAN_GROUP_ID)
         UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "master")
         # can get from https://coffeehouse.intellivoid.net/
         LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
