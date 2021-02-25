@@ -7,7 +7,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 # the secret configuration specific things
 from var import Var
 
-DB_URI = "postgres://fpcjlwlbvvetuj:40f669c5566855d9c7ac10a79814fcc35d2e04e0026503f07158f766ab42537b@ec2-54-144-251-233.compute-1.amazonaws.com:5432/d2hl9k01vg99sr"
+DB_URI = "postgres://bxvcsmczwdafcq:4e34203d52388a9494e1bb6bd1fb97dcff20fe8ef9872ca47a894d099380fa45@ec2-54-164-241-193.compute-1.amazonaws.com:5432/d91t9oe2tcqppn"
 
 
 def start() -> scoped_session:
