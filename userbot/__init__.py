@@ -17,7 +17,7 @@ from var import Var
 
 from .functions import aniefunction as topfunc
 
-LOGS = "cdj"
+LOGS = getLogger(name)
 StartTime = time.time()
 anieversion = "2.0.4"
 
