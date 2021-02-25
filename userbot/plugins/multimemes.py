@@ -14,7 +14,7 @@ import random
 import re
 import textwrap
 import time
-from asyncio.exceptions import TimeoutError
+from asyncio import TimeoutError
 from random import randint, uniform
 
 from glitch_this import ImageGlitcher
