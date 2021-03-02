@@ -196,8 +196,7 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     # Special case for deploy
     if conf == "deploy":
-        await event.edit("`Deploying userbot, please wait....`")
-        await deploy(event, repo, ups_rem, ac_br, txt)
+        await event.edit("`Deploying Locked Due to Heroku Suspension`")
         return
     if changelog == "" and not force_update:
         await event.edit(
