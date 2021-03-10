@@ -618,7 +618,6 @@ from telethon.tl.types import (
     ChatBannedRights,
 )
 
-from userbot import bot
 from userbot.utils import admin_cmd
 
 
