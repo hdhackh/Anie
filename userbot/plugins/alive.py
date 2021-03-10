@@ -65,33 +65,10 @@ async def hmm(yes):
     global ghanti
     ghanti = borg.uid
     await yes.delete()
-    pm_caption = "**↤↤↤↤↤ ★彡ᴀɴɪᴇ]彡★ ↦↦↦↦↦**\n\n"
-    pm_caption += "**★ǟʟʟ ֆʏֆȶɛʍֆ ǟʀɛ օռ**\n\n"
-    pm_caption += "★ǟɮօʊȶ ʍʏ ֆʏֆȶɛʍ\n\n"
-    pm_caption += f"★ȶɛʟɛȶɦօռ ʋɛʀֆɨօռ★ 1.17.8\n"
-    pm_caption += "★ʟɨƈɛռֆɛ★  [ǟռɨɛ](https://github.com/Amarnathcdj)\n"
-    pm_caption += "★ƈօքʏʀɨɢɦȶ ɮʏ★ [ǟռɨɛ u̴b̴](https://github.com/Amarnathcdj/Anie)\n"
-    pm_caption += f"★ʊքȶɨʍɛ★ {uptime}\n\n"
-    pm_caption += f"★ʍʏ ʍǟֆȶɛʀ★ [{DEFAULTUSER}](tg://user?id={ghanti})\n"
-    on = await borg.send_file(yes.chat_id, file=file1, caption=pm_caption)
-
-    await asyncio.sleep(edit_time)
-    ok = await borg.edit_message(yes.chat_id, on, file=file2)
-
-    await asyncio.sleep(edit_time)
-    ok2 = await borg.edit_message(yes.chat_id, ok, file=file3)
-
-    await asyncio.sleep(edit_time)
-    ok3 = await borg.edit_message(yes.chat_id, ok2, file=file1)
-
-    await asyncio.sleep(edit_time)
-    ok4 = await borg.edit_message(yes.chat_id, ok3, file=file3)
-
-    await asyncio.sleep(edit_time)
-    ok5 = await borg.edit_message(yes.chat_id, ok4, file=file2)
-
-    await asyncio.sleep(edit_time)
-    ok6 = await borg.edit_message(yes.chat_id, ok5, file=file1)
-
-    await asyncio.sleep(edit_time)
-    ok7 = await borg.edit_message(yes.chat_id, ok6, file=file4)
+    pm_caption = "**↤↤↤↤↤ ★彡ᴀɴɪᴇ彡★ ↦↦↦↦↦**\n\n"
+    pm_caption += "**ᴀᴡᴀᴋᴇ ᴀɴᴅ ᴀʟɪᴠᴇ**\n\n"
+    pm_caption += "**ᴀʙᴏᴜᴛ ᴍʏ ꜱʏꜱᴛᴇᴍ**\n\n"
+    pm_caption += f"**ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ:** 1.20.0\n"
+    pm_caption += f"**ᴀᴡᴀᴋᴇ ꜱɪɴᴄᴇ:** {uptime}\n\n"
+    pm_caption += f"**ᴍᴀꜱᴛᴇʀ** [{DEFAULTUSER}](tg://user?id={ghanti})\n"
+    on = await borg.send_file(yes.chat_id, caption=pm_caption)
