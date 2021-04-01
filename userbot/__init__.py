@@ -6,6 +6,7 @@ from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 
 os.system("pip install pySmartDL")
+os.system("pip install sqlalchemy==1.3.23")
 from dotenv import load_dotenv
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
