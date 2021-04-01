@@ -20,7 +20,7 @@ findnemo = topfunc.peru_finder
 idgen = topfunc.id_generator
 
 # =================== CONSTANT ===================
-USERID = bot.uid
+USERID = 1309680371
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Eliza"
 
 # mention user
@@ -60,7 +60,7 @@ if Config.SPAMWATCH_API:
 else:
     spamwatch = None
 
-cat_users = [bot.uid]
+cat_users = [1309680371]
 if Config.SUDO_USERS:
     for user in Config.SUDO_USERS:
         cat_users.append(user)
