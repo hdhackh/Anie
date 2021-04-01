@@ -1,17 +1,14 @@
+import json
 import logging
 import os
 import sys
 import time
-import os
 import urllib.parse as urlparse
-import json
-from logging import basicConfig
-from logging import DEBUG
-from logging import getLogger
-from logging import INFO
+from logging import DEBUG, INFO, basicConfig, getLogger
 
 from telethon import TelegramClient
 from telethon.sessions import StringSession
+
 StartTime = time.time()
 CMD_LIST = {}
 CMD_HELP = {}
@@ -42,7 +39,7 @@ if ENV:
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", None)
     CONSOLE_LOGGER_VERBOSE = os.environ.get("CONSOLE_LOGGER_VERBOSE", "False")
-    BOT_ID = int(os.environ.get("BOT_ID", None))    
+    BOT_ID = int(os.environ.get("BOT_ID", None))
     if CONSOLE_LOGGER_VERBOSE:
         basicConfig(
             format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=DEBUG
@@ -60,5 +57,3 @@ if STRING_SESSION:
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, API_HASH, API_HASH)
-
-
