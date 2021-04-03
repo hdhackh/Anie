@@ -5,7 +5,7 @@ import time
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 from Eliza import Smex
-from eliza import Smex
+from anie import Smex
 os.system("pip install pySmartDL")
 os.system("pip install sqlalchemy==1.3.23")
 from dotenv import load_dotenv
